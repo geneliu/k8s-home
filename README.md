@@ -2,7 +2,7 @@
 
 Managed (hopefully) by Flux
 
-## Structure
+## App structure
 
 - default
     - [ ] Traefik (acts as a reverse proxy for everything else)
@@ -17,3 +17,18 @@ Managed (hopefully) by Flux
     - [ ] Bazarr
     - [ ] Plex
     - [x] Jackett
+
+
+## Folder structure
+
+- `namespace_1`
+    - `app`
+        - `HelmRelease.yaml`
+        - `PersistentVolume.yaml` (for persistence data per container)
+    - `pvs` (for volumes needed for most containers in the namespace)
+- `namespace_2`
+    - ...
+- `namespace_3`
+    - ...
+- `repositories`
+    - `name_of_repo.yaml` (for Helm repositories)

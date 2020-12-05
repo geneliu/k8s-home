@@ -2,25 +2,25 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: nfs-jackett-config-pv
+  name: nfs-media-pv
   namespace: media
 spec:
   capacity:
-    storage: 512Mi
+    storage: 20Gi
   accessModes:
     - ReadWriteMany
   claimRef:
     namespace: media
-    name: nfs-jackett-config-pvc
+    name: nfs-media-pvc
   storageClassName: nfs
   nfs:
     server: 192.168.0.13
-    path: "/mnt/Internal/Test/AppData/Jackett"
+    path: "/mnt/Internal/Test/Media"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nfs-jackett-config-pvc
+  name: nfs-media-pvc
   namespace: media
 spec:
   accessModes:
@@ -28,4 +28,4 @@ spec:
   storageClassName: nfs
   resources:
     requests:
-      storage: 512Mi
+      storage: 20Gi
