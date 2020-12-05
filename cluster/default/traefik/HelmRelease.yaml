@@ -28,5 +28,28 @@ spec:
       enabled: true
       existingClaim: "nfs-traefik-certs-pvc"
       path: "/data"
+    ports:
+      traefik:
+        port: 9000
+        expose: false
+        exposedPort: 9000
+        protocol: TCP
+      web:
+        port: 8000
+        expose: true
+        exposedPort: 80
+        protocol: TCP
+        redirectTo: websecure
+      websecure:
+        port: 8443
+        expose: true
+        exposedPort: 443
+        protocol: TCP
+        tls:
+          enabled: true
+          certResolver: le
+          domains:
+            - localhost
+            - traefik.localhost
   interval: 10m0s
 
