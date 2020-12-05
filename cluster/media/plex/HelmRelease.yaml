@@ -14,14 +14,15 @@ spec:
         namespace: flux-system
   values:
     timezone: "Europe/Warsaw"
-    config:
-      enabled: true
-      claimName: "nfs-plex-config-pvc"
-    transcode:
-      enabled: true
-      claimName: "nfs-plex-transcode-pvc"
-    data:
-      enabled: true
-      claimName: "nfs-media-pvc"
+    persistence:
+      config:
+        enabled: true
+        claimName: "nfs-plex-config-pvc"
+      transcode:
+        enabled: true
+        claimName: "nfs-plex-transcode-pvc"
+      data:
+        enabled: true
+        claimName: "nfs-media-pvc"
   interval: 10m0s
 
