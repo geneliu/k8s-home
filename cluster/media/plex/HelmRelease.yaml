@@ -17,6 +17,9 @@ spec:
     config:
       enabled: true
       claimName: "nfs-plex-config-pvc"
+    transcode:
+      enabled: true
+      claimName: "nfs-plex-transcode-pvc"
     data:
       enabled: true
       claimName: "nfs-media-pvc"
