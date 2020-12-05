@@ -21,12 +21,9 @@ spec:
       config:
         enabled: true
         existingClaim: "nfs-qbittorrent-config-pvc"
-    additionalVolumeMounts:
-    - name: nfs-downloads
-      mountPath: "/media"
-    additionalVolumes:
-    - name: nfs-downloads
-      persistentVolumeClaim:
-        claimName: nfs-downloads-pvc
+      downloads:
+        enabled: true
+        mountPath: "/downloads"
+        existingClaim: "nfs-downloads-pvc"
   interval: 10m0s
 
