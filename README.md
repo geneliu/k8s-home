@@ -17,6 +17,8 @@ Managed (hopefully) by Flux
     - [ ] Bazarr
     - [x] Plex
     - [x] Jackett
+- games
+    - [ ] minecraft
 
 
 ## Folder structure
@@ -26,6 +28,7 @@ Managed (hopefully) by Flux
     - `app`
         - `HelmRelease.yaml`
         - `PersistentVolume.yaml` (for persistence data per container)
+        - `CustomResourceDefinition.yaml`
     - `pvs` (for volumes needed for most containers in the namespace)
 - `namespace_2`
     - ...

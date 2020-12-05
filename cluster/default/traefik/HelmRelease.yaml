@@ -1,0 +1,39 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: traefik
+      sourceRef:
+        kind: HelmRepository
+        name: traefik
+        namespace: flux-system
+  values:
+    providers:
+      kubernetesCRD:
+        enabled: true
+        namespaces:
+          - "default"
+          - "media"
+    ports:
+      traefik:
+        port: 9000
+        expose: true
+        exposedPort: 9000
+        protocol: TCP
+      web:
+        port: 8000
+        expose: true
+        exposedPort: 80
+        protocol: TCP
+      websecure:
+        port: 8443
+        expose: true
+        exposedPort: 443
+        protocol: TCP
+  interval: 10m0s
+
