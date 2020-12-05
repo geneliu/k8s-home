@@ -2,12 +2,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: sonarr
+  name: jackett
   namespace: media
 spec:
   chart:
     spec:
-      chart: sonarr
+      chart: jackett
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
@@ -19,6 +19,6 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: "nfs-sonarr-config-pvc"
+        existingClaim: "nfs-jackett-config-pvc"
   interval: 10m0s
 
