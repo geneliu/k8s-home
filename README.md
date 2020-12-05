@@ -8,8 +8,8 @@ Managed (hopefully) by Flux
     - [ ] Traefik (acts as a reverse proxy for everything else)
 - observability
     - [ ] Grafana
-    - [ ] Prometheus
     - [ ] Loki
+    - [ ] InfluxDB
 - media
     - [ ] rtorrent with Flood
     - [x] Sonarr
