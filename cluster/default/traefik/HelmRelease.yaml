@@ -19,21 +19,5 @@ spec:
         namespaces:
           - "default"
           - "media"
-    ports:
-      traefik:
-        port: 9000
-        expose: true
-        exposedPort: 9000
-        protocol: TCP
-      web:
-        port: 8000
-        expose: true
-        exposedPort: 80
-        protocol: TCP
-      websecure:
-        port: 8443
-        expose: true
-        exposedPort: 443
-        protocol: TCP
   interval: 10m0s
 
