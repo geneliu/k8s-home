@@ -11,17 +11,18 @@ Managed (hopefully) by Flux
     - [ ] Loki
     - [ ] InfluxDB
 - media
-    - [ ] rtorrent with Flood
+    - [x] qBitTorrent
     - [x] Sonarr
     - [ ] Radarr
     - [ ] Bazarr
-    - [ ] Plex
+    - [x] Plex
     - [x] Jackett
 
 
 ## Folder structure
 
 - `namespace_1`
+    - `_namespace.yaml`
     - `app`
         - `HelmRelease.yaml`
         - `PersistentVolume.yaml` (for persistence data per container)
