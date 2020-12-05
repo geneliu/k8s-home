@@ -32,3 +32,10 @@ Managed (hopefully) by Flux
     - ...
 - `repositories`
     - `name_of_repo.yaml` (for Helm repositories)
+
+## PV and PVC naming scheme
+
+- For per-container PV: `[storage type]-[container name]-[usage]-[pv or pvc]`
+    - Example: `nfs-plex-transcode-pvc`
+- For per-namespace PV: `[storage type]-[usage]-[pv or pvc]`
+    - Example: `nfs-media-pvc`
