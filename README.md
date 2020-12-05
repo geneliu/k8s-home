@@ -29,6 +29,7 @@ Managed (hopefully) by Flux
         - `HelmRelease.yaml`
         - `PersistentVolume.yaml` (for persistence data per container)
         - `CustomResourceDefinition.yaml`
+        - `Route.yaml` (for Traefik routing)
     - `pvs` (for volumes needed for most containers in the namespace)
 - `namespace_2`
     - ...

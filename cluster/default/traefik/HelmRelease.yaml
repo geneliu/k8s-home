@@ -19,5 +19,14 @@ spec:
         namespaces:
           - "default"
           - "media"
+    additionalArguments:
+      - "--certificatesresolvers.le.acme.tlschallenge"
+      - "--certificatesresolvers.le.acme.email=zbigniew.zolnierowicz@gmail.com"
+      - "--certificatesresolvers.le.acme.storage=/data/acme.json"
+      - "--certificatesresolvers.le.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+    persistence:
+      enabled: true
+      existingClaim: "nfs-traefik-certs-pvc"
+      path: "/data"
   interval: 10m0s
 
