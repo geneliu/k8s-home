@@ -1,0 +1,32 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: qbittorrent
+  namespace: media
+spec:
+  chart:
+    spec:
+      chart: qbittorrent
+      sourceRef:
+        kind: HelmRepository
+        name: k8s-at-home
+        namespace: flux-system
+  values:
+    env:
+      TZ: Europe/Warsaw
+      PUID: 1001
+      PGID: 1001
+    persistence:
+      config:
+        enabled: true
+        existingClaim: "nfs-qbittorrent-config-pvc"
+    additionalVolumeMounts:
+    - name: nfs-downloads
+      mountPath: "/media"
+    additionalVolumes:
+    - name: nfs-downloads
+      persistentVolumeClaim:
+        claimName: nfs-downloads-pvc
+  interval: 10m0s
+
