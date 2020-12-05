@@ -6,6 +6,7 @@ metadata:
   namespace: default
 spec:
   entryPoints:
+    - web
     - websecure
   routes:
     - match: Host(`traefik.localhost`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
