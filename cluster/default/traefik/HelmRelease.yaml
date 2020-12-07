@@ -16,9 +16,7 @@ spec:
     providers:
       kubernetesCRD:
         enabled: true
-        namespaces:
-          - "default"
-          - "media"
+        namespaces: ["default", "media"]
     additionalArguments:
       - "--certificatesresolvers.le.acme.tlschallenge"
       - "--certificatesresolvers.le.acme.email=zbigniew.zolnierowicz@gmail.com"
@@ -52,5 +50,6 @@ spec:
             - main: localhost
               sans:
                 - traefik.localhost
+                - torrent.localhost
   interval: 10m0s
 
