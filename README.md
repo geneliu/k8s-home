@@ -10,7 +10,7 @@ Managed (hopefully) by [Flux](https://github.com/fluxcd/flux2)
 # First, bootstrap the repository with Flux v2
 $ flux bootstrap github --verbose \
   --owner=zbigniewzolnierowicz \
-  --repository=makima \
+  --repository=k8s-home \
   --branch=main \
   --path=cluster \
   --personal
