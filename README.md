@@ -26,7 +26,7 @@ For why you need the second command, see [this issue](https://github.com/fluxcd/
 ## App structure
 
 - default
-    - [ ] Traefik (acts as a reverse proxy for everything else)
+    - [x] Traefik (acts as a reverse proxy for everything else)
 - observability
     - [ ] Grafana
     - [ ] Loki
@@ -35,7 +35,7 @@ For why you need the second command, see [this issue](https://github.com/fluxcd/
     - [x] qBitTorrent
     - [x] Sonarr
     - [x] Radarr
-    - [ ] Bazarr
+    - [x] Bazarr
     - [x] Plex
     - [x] Jackett
 - games
