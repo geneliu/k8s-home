@@ -12,7 +12,7 @@ spec:
       match: Host(`plex.localhost`)
       services:
         - kind: Service
-          name: plex
+          name: plex-tcp
           namespace: media
-          passHostHeader: false
+          passHostHeader: true
           port: 32400
