@@ -15,7 +15,10 @@ $ flux bootstrap github --verbose \
   --path=cluster \
   --personal
 # Then, add the routes for Traefik
-$ kubectl apply -f ./routes/**/*.yaml
+$ kubectl apply \
+    -f ./routes/plex/Plex.yaml \
+    -f ./routes/qbittorrent/qBitTorrent.yaml \
+    -f ./routes/traefik/Dashboard.yaml
 ```
 
 For why you need the second command, see [this issue](https://github.com/fluxcd/flux2/issues/562#issuecomment-740014295).

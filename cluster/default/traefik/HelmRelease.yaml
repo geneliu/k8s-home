@@ -51,5 +51,6 @@ spec:
               sans:
                 - traefik.localhost
                 - torrent.localhost
+                - plex.localhost
   interval: 10m0s
 
