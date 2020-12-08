@@ -1,0 +1,18 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: radarr-route
+  namespace: media
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`radarr.localhost`)
+      services:
+        - kind: Service
+          name: radarr
+          namespace: media
+          passHostHeader: true
+          port: 8989

@@ -2,12 +2,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: sonarr
+  name: radarr
   namespace: media
 spec:
   chart:
     spec:
-      chart: sonarr
+      chart: radarr
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
@@ -20,7 +20,7 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: "nfs-sonarr-config-pvc"
+        existingClaim: "nfs-radarr-config-pvc"
       media:
         enabled: true
         existingClaim: "nfs-media-pvc"
