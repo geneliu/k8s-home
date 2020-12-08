@@ -52,5 +52,6 @@ spec:
                 - traefik.localhost
                 - torrent.localhost
                 - plex.localhost
+                - radarr.localhost
   interval: 10m0s
 

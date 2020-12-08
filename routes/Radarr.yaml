@@ -15,4 +15,4 @@ spec:
           name: radarr
           namespace: media
           passHostHeader: true
-          port: 8989
+          port: 7878
