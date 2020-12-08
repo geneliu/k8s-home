@@ -54,5 +54,6 @@ spec:
                 - torrent.localhost
                 - plex.localhost
                 - radarr.localhost
+                - bazarr.localhost
   interval: 10m0s
 

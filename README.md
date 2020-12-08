@@ -34,7 +34,7 @@ For why you need the second command, see [this issue](https://github.com/fluxcd/
 - media
     - [x] qBitTorrent
     - [x] Sonarr
-    - [ ] Radarr
+    - [x] Radarr
     - [ ] Bazarr
     - [x] Plex
     - [x] Jackett
