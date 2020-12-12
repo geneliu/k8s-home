@@ -27,6 +27,9 @@ spec:
       enabled: true
       existingClaim: "nfs-traefik-certs-pvc"
       path: "/data"
+    service:
+      externalIPs:
+        - 192.168.0.123
     ports:
       traefik:
         port: 9000
