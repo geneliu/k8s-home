@@ -53,12 +53,12 @@ spec:
           enabled: true
           certResolver: le
           domains:
-            - main: localhost
+            - main: zolnierowi.cz
               sans:
-                - traefik.localhost
-                - torrent.localhost
-                - plex.localhost
-                - radarr.localhost
-                - bazarr.localhost
+                - traefik.zolnierowi.cz
+                - torrent.zolnierowi.cz
+                - plex.zolnierowi.cz
+                - radarr.zolnierowi.cz
+                - bazarr.zolnierowi.cz
   interval: 10m0s
 
