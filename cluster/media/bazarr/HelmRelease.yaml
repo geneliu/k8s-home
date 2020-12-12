@@ -20,7 +20,7 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: "nfs-bazarr-config-pvc"
+        existingClaim: "openebs-hostpath-bazarr-config-pvc"
       media:
         enabled: true
         existingClaim: "nfs-media-pvc"

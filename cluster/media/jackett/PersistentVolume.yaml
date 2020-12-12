@@ -1,31 +1,13 @@
 ---
 apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: nfs-jackett-config-pv
-  namespace: media
-spec:
-  capacity:
-    storage: 512Mi
-  accessModes:
-    - ReadWriteMany
-  claimRef:
-    namespace: media
-    name: nfs-jackett-config-pvc
-  storageClassName: nfs
-  nfs:
-    server: 192.168.0.13
-    path: "/mnt/Internal/Test/AppData/Jackett"
----
-apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nfs-jackett-config-pvc
+  name: openebs-hostpath-jackett-config-pvc
   namespace: media
 spec:
+  storageClassName: openebs-hostpath
   accessModes:
-    - ReadWriteMany
-  storageClassName: nfs
+    - ReadWriteOnce
   resources:
     requests:
       storage: 512Mi

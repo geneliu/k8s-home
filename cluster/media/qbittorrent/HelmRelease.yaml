@@ -20,7 +20,7 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: "nfs-qbittorrent-config-pvc"
+        existingClaim: "openebs-hostpath-qbittorrent-config-pvc"
       downloads:
         enabled: true
         mountPath: "/downloads"
