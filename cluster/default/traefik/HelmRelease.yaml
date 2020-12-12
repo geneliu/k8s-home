@@ -27,6 +27,8 @@ spec:
       enabled: true
       existingClaim: "openebs-hostpath-traefik-certs-pvc"
       path: "/data"
+    service:
+      enabled: true
     ports:
       traefik:
         port: 9000
