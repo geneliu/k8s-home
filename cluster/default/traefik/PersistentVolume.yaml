@@ -3,14 +3,14 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: nfs-traefik-certs-pv
-  namespace: default
+  namespace: kube-system
 spec:
   capacity:
     storage: 128Mi
   accessModes:
     - ReadWriteMany
   claimRef:
-    namespace: default
+    namespace: kube-system
     name: nfs-traefik-certs-pvc
   storageClassName: nfs
   nfs:
@@ -21,7 +21,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: nfs-traefik-certs-pvc
-  namespace: default
+  namespace: kube-system
 spec:
   accessModes:
     - ReadWriteMany
