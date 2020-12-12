@@ -27,11 +27,6 @@ spec:
       enabled: true
       existingClaim: "openebs-hostpath-traefik-certs-pvc"
       path: "/data"
-    service:
-      enabled: true
-      type: LoadBalancer
-      externalIPs:
-        - 192.168.0.123
     ports:
       traefik:
         port: 9000
