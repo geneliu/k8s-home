@@ -12,7 +12,6 @@ spec:
   claimRef:
     namespace: media
     name: nfs-downloads-pvc
-  storageClassName: nfs
   nfs:
     server: 192.168.0.13
     path: "/mnt/Internal/Test/Downloads"
@@ -25,7 +24,6 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: nfs
   resources:
     requests:
       storage: 20Gi

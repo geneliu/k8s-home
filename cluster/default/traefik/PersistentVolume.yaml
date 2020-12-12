@@ -1,31 +1,13 @@
 ---
 apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: nfs-traefik-certs-pv
-  namespace: kube-system
-spec:
-  capacity:
-    storage: 128Mi
-  accessModes:
-    - ReadWriteMany
-  claimRef:
-    namespace: kube-system
-    name: nfs-traefik-certs-pvc
-  storageClassName: nfs
-  nfs:
-    server: 192.168.0.13
-    path: "/mnt/Internal/Test/AppData/Traefik/Certs"
----
-apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nfs-traefik-certs-pvc
+  name: openebs-hostpath-traefik-certs-pvc
   namespace: kube-system
 spec:
+  storageClassName: openebs-hostpath
   accessModes:
-    - ReadWriteMany
-  storageClassName: nfs
+    - ReadWriteOnce
   resources:
     requests:
-      storage: 128Mi
+      storage: 512Mi
