@@ -4,6 +4,10 @@
 
 Managed (hopefully) by [Flux](https://github.com/fluxcd/flux2)
 
+## !!! IMPORTANT !!!
+
+When using k3s, disable Traefik by editing `/etc/systemd/system/k3s.service`!
+
 ## Installation
 
 ```sh
