@@ -53,6 +53,7 @@ spec:
                 - traefik.zolnierowi.cz
                 - torrent.zolnierowi.cz
                 - plex.zolnierowi.cz
+                - sonarr.zolnierowi.cz
                 - radarr.zolnierowi.cz
                 - bazarr.zolnierowi.cz
   interval: 10m0s
