@@ -9,7 +9,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`radarr.localhost`)
+      match: Host(`radarr.zolnierowi.cz`)
       services:
         - kind: Service
           name: radarr

@@ -9,7 +9,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`plex.localhost`)
+      match: Host(`plex.zolnierowi.cz`)
       services:
         - kind: Service
           name: plex-tcp

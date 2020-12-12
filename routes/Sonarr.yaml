@@ -9,7 +9,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`sonarr.localhost`)
+      match: Host(`sonarr.zolnierowi.cz`)
       services:
         - kind: Service
           name: sonarr

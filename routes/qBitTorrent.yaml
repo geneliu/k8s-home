@@ -9,7 +9,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`torrent.localhost`)
+      match: Host(`torrent.zolnierowi.cz`)
       services:
         - kind: Service
           name: qbittorrent
