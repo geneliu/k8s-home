@@ -25,7 +25,7 @@ spec:
       - "--accesslog=true"
     persistence:
       enabled: true
-      existingClaim: "nfs-traefik-certs-pvc"
+      existingClaim: "openebs-hostpath-traefik-certs-pvc"
       path: "/data"
     service:
       enabled: true
