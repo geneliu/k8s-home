@@ -6,7 +6,11 @@ Managed (hopefully) by [Flux](https://github.com/fluxcd/flux2)
 
 ## !!! IMPORTANT !!!
 
-When using k3s, disable Traefik by editing `/etc/systemd/system/k3s.service`!
+When using k3s, disable Traefik by editing `/etc/systemd/system/k3s.service`! Here is a quick snippet for you (and me).
+
+```bash
+curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--disable=traefik" sh -
+```
 
 ## Installation
 
