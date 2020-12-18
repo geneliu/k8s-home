@@ -14,7 +14,7 @@ spec:
     name: nfs-media-pvc
   nfs:
     server: 192.168.0.13
-    path: "/mnt/Internal/Test/Media"
+    path: "/mnt/Main/Media/Videos"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

@@ -14,7 +14,7 @@ spec:
     name: nfs-downloads-pvc
   nfs:
     server: 192.168.0.13
-    path: "/mnt/Internal/Test/Downloads"
+    path: "/mnt/Main/Media/Downloads"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
