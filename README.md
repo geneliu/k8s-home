@@ -38,10 +38,12 @@ For why you need the second command, see [this issue](https://github.com/fluxcd/
 
 - default
     - [x] Traefik (acts as a reverse proxy for everything else)
+    - [ ] Blocky
 - observability
     - [ ] Grafana
     - [ ] Loki
-    - [ ] InfluxDB
+    - [ ] Prometheus
+    - [ ] speedtest-prometheus
 - media
     - [x] qBitTorrent
     - [x] Sonarr
@@ -51,8 +53,8 @@ For why you need the second command, see [this issue](https://github.com/fluxcd/
     - [x] Jackett
 - games
     - [ ] minecraft
-- flux-system
-    - [ ] OpenEBS with Local PV Hostpath
+- storage
+    - [x] OpenEBS with Local PV Hostpath
 
 
 ## Folder structure
