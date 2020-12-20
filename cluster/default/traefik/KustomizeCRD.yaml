@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   interval: 5m
-  path: "./routes"
+  path: "./routes/kustomization.yaml"
   prune: true
   sourceRef:
     kind: GitRepository
