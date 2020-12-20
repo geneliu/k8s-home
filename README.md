@@ -60,6 +60,11 @@ For why you need the second command, see [this issue](https://github.com/fluxcd/
 ## Folder structure
 
 - `cluster`
+    - `default`
+        - `traefik`
+            - `routes`
+                - `AppName.yaml`
+                - `kustomization.yaml` (add every route declared by `AppName.yaml` here)
     - `namespace_1`
         - `_namespace.yaml`
         - `app`
@@ -73,9 +78,6 @@ For why you need the second command, see [this issue](https://github.com/fluxcd/
         - ...
     - `repositories`
         - `name_of_repo.yaml` (for Helm repositories)
-- `routes`
-    - `app`
-        - `NameOfRoute.yaml`
 
 ## PV and PVC naming scheme
 
