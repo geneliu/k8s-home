@@ -1,4 +1,9 @@
 {
   "enabled": true,
   "timezone": "Europe/Warsaw",
+  "packageRules": [
+    {
+      "datasources": ["helm"],
+    }
+  ]
 }
