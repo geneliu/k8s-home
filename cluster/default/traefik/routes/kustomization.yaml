@@ -1,0 +1,8 @@
+resources:
+  - "./Bazarr.yaml"
+  - "./Dashboard.yaml"
+  - "./Jackett.yaml"
+  - "./Plex.yaml"
+  - "./qBitTorrent.yaml"
+  - "./Radarr.yaml"
+  - "./Sonarr.yaml"
