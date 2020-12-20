@@ -2,7 +2,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: bazarr-route
+  name: jackett-route
   namespace: media
 spec:
   entryPoints:
