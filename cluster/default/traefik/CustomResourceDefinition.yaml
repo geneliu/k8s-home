@@ -1,3 +1,4 @@
+---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
@@ -9,3 +10,16 @@ spec:
   ignore: |
     /*
     !/traefik/crds
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: traefik-routes-kustomize
+  namespace: default
+spec:
+  interval: 5m
+  path: "./routes/kustomization.yaml"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: traefik-crd
