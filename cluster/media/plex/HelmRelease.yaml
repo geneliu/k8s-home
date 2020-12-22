@@ -22,7 +22,7 @@ spec:
         claimName: "openebs-hostpath-plex-config-pvc"
       transcode:
         enabled: true
-        claimName: "openebs-hostpath-plex-transcode-pvc"
+        claimName: "nfs-transcode-pvc"
       data:
         enabled: true
         claimName: "nfs-media-pvc"

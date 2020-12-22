@@ -13,14 +13,30 @@ spec:
       storage: 512Mi
 ---
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: PersistentVolume
 metadata:
-  name: openebs-hostpath-plex-transcode-pvc
+  name: nfs-transcode-pv
   namespace: media
 spec:
-  storageClassName: openebs-hostpath
+  capacity:
+    storage: 256Gi
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
+  claimRef:
+    namespace: media
+    name: nfs-transcode-pvc
+  nfs:
+    server: 192.168.0.13
+    path: "/mnt/Main/Media/Transcode"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nfs-transcode-pvc
+  namespace: media
+spec:
+  accessModes:
+    - ReadWriteMany
   resources:
     requests:
-      storage: 40Gi
+      storage: 256Gi
