@@ -55,17 +55,11 @@ For why you need the second command, see [this issue](https://github.com/fluxcd/
     - [x] Jackett
 - games
     - [ ] minecraft
-<<<<<<< HEAD
-- storage
-    - [x] OpenEBS with Local PV Hostpath
-=======
 - flux-system
     - [x] OpenEBS with Local PV Hostpath
 - programming
     - [ ] Gitea
     - [ ] Jenkins
->>>>>>> 41f5a75 (Update README)
-
 
 ## Folder structure
 
