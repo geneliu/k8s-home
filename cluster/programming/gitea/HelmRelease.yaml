@@ -63,5 +63,5 @@ spec:
   valuesFrom:
   - kind: Secret
     name: "gitea-secret"
-    key: "gitea-values"
+    valuesKey: "gitea-values"
     optional: false
