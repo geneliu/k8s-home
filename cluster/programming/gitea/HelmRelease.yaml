@@ -33,6 +33,7 @@ spec:
     gitea:
       admin:
         username: "zed"
+        email: "zbigniew.zolnierowicz@gmail.com"
       config:
         server:
           root_url: https://git.zolnierowi.cz
