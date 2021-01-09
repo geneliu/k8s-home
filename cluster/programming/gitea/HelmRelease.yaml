@@ -55,6 +55,7 @@ spec:
           from: noreply@git.zolnierowi.cz
           user: apikey
           mailer_type: smtp
+          port: 465
       database:
         builtIn:
           postgresql:
