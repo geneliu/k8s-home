@@ -12,7 +12,7 @@ spec:
       match: Host(`git.zolnierowi.cz`)
       services:
         - kind: Service
-          name: gitea
+          name: gitea-http
           namespace: programming
           passHostHeader: true
           port: 3000
