@@ -16,3 +16,19 @@ spec:
           namespace: programming
           passHostHeader: true
           port: 3000
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: gitea-route-ssh
+  namespace: programming
+spec:
+  entryPoints:
+    - ssh
+  routes:
+  - match: HostSNI(`git.zolnierowi.cz`)
+    services:
+    - kind: Service
+      name: gitea-ssh
+      namespace: programming
+      port: 22
