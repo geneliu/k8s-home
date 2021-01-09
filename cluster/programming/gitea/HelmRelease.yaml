@@ -38,8 +38,6 @@ spec:
         server:
           ROOT_URL: https://git.zolnierowi.cz
           SSH_DOMAIN: git.zolnierowi.cz
-          START_SSH_SERVER: true
-          SSH_PORT: 2222
         APP_NAME: "Gitea"
         respository:
           DEFAULT_PRIVATE: true
