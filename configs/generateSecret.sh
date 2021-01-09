@@ -7,6 +7,7 @@ VALUES_PATH=`cat ./mapping.json | $JQ_COMMAND .mapping.$1.values_path`
 SECRET_NAME=`cat ./mapping.json | $JQ_COMMAND .mapping.$1.secret_name`
 UNSEALED_SECRET_PATH=`cat ./mapping.json | $JQ_COMMAND .mapping.$1.unsealed_secret_path`
 SEALED_SECRET_PATH=`cat ./mapping.json | $JQ_COMMAND .mapping.$1.sealed_secret_path`
+NAMESPACE=`cat ./mapping.json | $JQ_COMMAND .mapping.$1.namespace`
 PUBLIC_KEY_PATH=`cat ./mapping.json | $JQ_COMMAND .public_key_path`
 
 echo "Check for dependencies..."
@@ -41,9 +42,9 @@ else
     echo "================================================================"
     echo "Generating unsealed secret..."
 fi
-kubectl create secret generic $SECRET_NAME --from-file="$KEY=$VALUES_PATH" --dry-run=client -o yaml > $UNSEALED_SECRET_PATH
+kubectl create secret generic $SECRET_NAME --from-file="$KEY=$VALUES_PATH" --namespace="$NAMESPACE" --dry-run=client -o yaml > $UNSEALED_SECRET_PATH
 echo "Secret $SECRET_NAME has been outputted to $UNSEALED_SECRET_PATH."
 echo "================================================================"
 echo "Generating sealed secret..."
-kubeseal --format=yaml --cert=$PUBLIC_KEY_PATH < $UNSEALED_SECRET_PATH > $SEALED_SECRET_PATH
+kubeseal --format=yaml --cert=$PUBLIC_KEY_PATH --namespace="$NAMESPACE" < $UNSEALED_SECRET_PATH > $SEALED_SECRET_PATH
 echo "Sealed secret $SECRET_NAME has been outputted to $SEALED_SECRET_PATH."
