@@ -37,7 +37,7 @@ spec:
       config:
         server:
           ROOT_URL: https://git.zolnierowi.cz
-          SSH_DOMAIN: git.zolnierowi.cz
+          SSH_DOMAIN: "git.zolnierowi.cz"
           START_SSH_SERVER: true
         APP_NAME: "Gitea"
         respository:
