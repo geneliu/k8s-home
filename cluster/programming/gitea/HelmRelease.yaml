@@ -38,8 +38,9 @@ spec:
           ROOT_URL: https://git.zolnierowi.cz
           SSH_DOMAIN: git.zolnierowi.cz
         APP_NAME: "Gitea"
-        respository:
+        repository:
           DEFAULT_PRIVATE: true
+          USE_COMPAT_SSH_URI: true
         admin:
           DISABLE_REGULAR_ORG_CREATION: true
         security:
