@@ -65,5 +65,6 @@ spec:
                 - sonarr.zolnierowi.cz
                 - radarr.zolnierowi.cz
                 - bazarr.zolnierowi.cz
+                - git.zolnierowi.cz
   interval: 10m0s
 

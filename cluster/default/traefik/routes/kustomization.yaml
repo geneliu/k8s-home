@@ -6,3 +6,4 @@ resources:
   - "./qBitTorrent.yaml"
   - "./Radarr.yaml"
   - "./Sonarr.yaml"
+  - "./Gitea.yaml"
