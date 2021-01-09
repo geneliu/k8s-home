@@ -22,6 +22,7 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--disable=traefik" sh -
 
 ### Generate secrets
 
+0. Install dependencies: `jq` and `kubeseal`
 1. Go to the `configs/values` folder and remove the `.example` suffix at the ends of files. Then, replace the data inside those files.
 2. Run the following commands from the `configs` folder:
 
