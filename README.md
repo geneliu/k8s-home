@@ -20,16 +20,26 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--disable=traefik" sh -
 
 ## Installation
 
+### Generate secrets
+
+1. Go to the `configs/values` folder and remove the `.example` suffix at the ends of files. Then, replace the data inside those files.
+2. Run the following commands from the `configs` folder:
+
 ```sh
-# First, bootstrap the repository with Flux v2
+    chmod +x ./generateSecret.sh
+    ./generateSecret.sh <name of the app>
+```
+
+### Install cluster
+
+```sh
+# Bootstrap the repository with Flux v2
 $ flux bootstrap github --verbose \
   --owner=zbigniewzolnierowicz \
   --repository=k8s-home \
   --branch=main \
   --path=cluster \
   --personal
-# Then, add the routes for Traefik
-$ kubectl apply -f ./routes
 ```
 
 For why you need the second command, see [this issue](https://github.com/fluxcd/flux2/issues/562#issuecomment-740014295).
@@ -82,6 +92,11 @@ For why you need the second command, see [this issue](https://github.com/fluxcd/
         - ...
     - `repositories`
         - `name_of_repo.yaml` (for Helm repositories)
+- `configs`
+    - `values`
+        - `appname.yaml`
+    - `unsealed-secrets`
+    - `mapping.json`
 
 ## PV and PVC naming scheme
 

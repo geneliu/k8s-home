@@ -1,0 +1,3 @@
+configs/sealed-secrets/*.yaml
+configs/unsealed-secrets/*.yaml
+configs/values/*.yaml

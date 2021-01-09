@@ -1,0 +1,6 @@
+gitea:
+  admin:
+    password: GiteaAdminPassword
+  config:
+    mailer:
+      PASSWD: PUT_SENDGRID_API_KEY_HEREaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa==

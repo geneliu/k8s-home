@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Mapping",
+    "description": "A map for generating sealed secrets for my Kubernetes cluster",
+    "type": "object",
+    "properties": {
+        "public_key_path": {
+            "type": "string",
+            "description": "Path to the public key you got via kubeseal."
+        },
+        "mapping": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Name of the app you want to create a secret for\n\n(purely decorational)"
+                    },
+                    "secret_name": {
+                        "type": "string",
+                        "description": "Name of the secret you want to create\n\n(must match to the one in HelmRelease)"
+                    },
+                    "key": {
+                        "type": "string",
+                        "description": "Name of the key in .data where the encoded values.yaml is.\n\n(must match to the one in HelmRelease)"
+                    },
+                    "values_path": {
+                        "type": "string",
+                        "description": "Path to the values.yaml-formatted file with values for HelmRepository"
+                    },
+                    "sealed_secret_path": {
+                        "type": "string",
+                        "description": "Path where the sealed secret will be outputted\n\n(usually something like ../cluster/<namespace>/<app>/SealedSecret.yaml)"
+                    },
+                    "unsealed_secret_path": {
+                        "type": "string",
+                        "description": "Path where the unsealed secret will be outputted\n\n(usually something like ../cluster/<namespace>/<app>/SealedSecret.yaml)"
+                    },
+                    "namespace": {
+                        "type": "string",
+                        "description": "Secret's namespace"
+                    }
+                },
+                "required": ["name", "secret_name", "key", "values_path", "sealed_secret_path", "namespace"]
+            }
+        }
+    },
+    "required": ["public_key_path"]
+  }

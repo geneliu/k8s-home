@@ -1,0 +1,15 @@
+{
+    "$schema": "./mapping.schema.json",
+    "public_key_path": "./pub-sealed-secrets.pem",
+    "mapping": {
+        "gitea": {
+            "name": "Gitea",
+            "secret_name": "gitea-secret",
+            "key": "gitea-values",
+            "values_path": "./values/gitea.yaml",
+            "sealed_secret_path": "../cluster/programming/gitea/SealedSecret.yaml",
+            "unsealed_secret_path": "./unsealed-secrets/GiteaUnsealedSecret.yaml",
+            "namespace": "programming"
+        }
+    }
+}
