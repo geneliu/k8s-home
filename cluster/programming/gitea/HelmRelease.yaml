@@ -36,6 +36,7 @@ spec:
       config:
         server:
           root_url: https://git.zolnierowi.cz
+          SSH_DOMAIN: git.zolnierowi.cz
         APP_NAME: "Gitea"
         respository:
           DEFAULT_PRIVATE: true
@@ -50,7 +51,7 @@ spec:
         mailer:
           enabled: true
           host: smtp.sendgrid.net
-          from: git@zolnierowi.cz
+          from: noreply@git.zolnierowi.cz
           user: apikey
           mailer_type: smtp
       database:
