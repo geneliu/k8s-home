@@ -18,7 +18,7 @@ spec:
     providers:
       kubernetesCRD:
         enabled: true
-        namespaces: ["default", "media"]
+        namespaces: ["default", "media", "programming"]
     additionalArguments:
       - "--certificatesresolvers.le.acme.tlschallenge"
       - "--certificatesresolvers.le.acme.email=zbigniew.zolnierowicz@gmail.com"
