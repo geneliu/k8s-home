@@ -29,7 +29,7 @@ spec:
     service:
       ssh:
         type: ClusterIP
-        # externalTrafficPolicy: Local
+        port: 2222
     gitea:
       admin:
         username: "zed"
@@ -39,6 +39,7 @@ spec:
           ROOT_URL: https://git.zolnierowi.cz
           SSH_DOMAIN: git.zolnierowi.cz
           START_SSH_SERVER: true
+          SSH_PORT: 2222
         APP_NAME: "Gitea"
         respository:
           DEFAULT_PRIVATE: true
