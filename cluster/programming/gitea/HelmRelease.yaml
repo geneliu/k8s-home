@@ -51,11 +51,10 @@ spec:
           REQUIRE_SIGNIN_VIEW: true
         mailer:
           enabled: true
-          host: smtp.sendgrid.net
+          host: smtp.sendgrid.net:465
           from: noreply@git.zolnierowi.cz
           user: apikey
           mailer_type: smtp
-          port: 465
       database:
         builtIn:
           postgresql:
