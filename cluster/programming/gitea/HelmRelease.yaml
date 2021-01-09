@@ -29,7 +29,6 @@ spec:
     service:
       ssh:
         type: ClusterIP
-        port: 22
     gitea:
       admin:
         username: "zed"
