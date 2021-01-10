@@ -7,6 +7,8 @@ metadata:
 spec:
   entryPoints:
     - websecure
+  tls:
+    certResolver: le
   routes:
     - kind: Rule
       match: Host(`jackett.zolnierowi.cz`)
