@@ -42,7 +42,7 @@
                         "description": "Secret's namespace"
                     }
                 },
-                "required": ["name", "secret_name", "key", "values_path", "sealed_secret_path", "namespace"]
+                "required": ["name", "secret_name", "key", "sealed_secret_path", "namespace"]
             }
         }
     },
