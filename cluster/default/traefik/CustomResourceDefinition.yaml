@@ -5,6 +5,9 @@ metadata:
   name: traefik-crd
   namespace: default
 spec:
+  dependsOn:
+    - name: traefik
+      namespace: default
   interval: 5m
   url: https://github.com/traefik/traefik-helm-chart/
   ignore: |
