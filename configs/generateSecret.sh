@@ -42,12 +42,20 @@ generate() {
         echo "Values file at $VALUES_PATH was found."
         echo "================================================================"
         echo "Generating unsealed secret..."
-        kubectl create secret generic $SECRET_NAME --from-file="$KEY=$VALUES_PATH" --namespace="$NAMESPACE" --dry-run=client -o yaml > $UNSEALED_SECRET_PATH
+        if [[ $NAMESPACE == "null" ]]; then
+            kubectl create secret generic $SECRET_NAME --from-file="$KEY=$VALUES_PATH" --dry-run=client -o yaml > $UNSEALED_SECRET_PATH
+        else
+            kubectl create secret generic $SECRET_NAME --from-file="$KEY=$VALUES_PATH" --namespace="$NAMESPACE" --dry-run=client -o yaml > $UNSEALED_SECRET_PATH
+        fi
         echo "Secret $SECRET_NAME has been outputted to $UNSEALED_SECRET_PATH."
         echo "================================================================"
     fi
     echo "Generating sealed secret..."
-    kubeseal --format=yaml --cert=$PUBLIC_KEY_PATH --namespace="$NAMESPACE" < $UNSEALED_SECRET_PATH > $SEALED_SECRET_PATH
+    if [[ $NAMESPACE == "null" ]]; then
+        kubeseal --format=yaml --cert=$PUBLIC_KEY_PATH < $UNSEALED_SECRET_PATH > $SEALED_SECRET_PATH
+    else
+        kubeseal --format=yaml --cert=$PUBLIC_KEY_PATH --namespace="$NAMESPACE" < $UNSEALED_SECRET_PATH > $SEALED_SECRET_PATH
+    fi
     echo "Sealed secret $SECRET_NAME has been outputted to $SEALED_SECRET_PATH."
 }
 

@@ -16,8 +16,7 @@
             "secret_name": "cert-manager-cloudflare",
             "key": "api-key",
             "sealed_secret_path": "../cluster/cert-manager/cert-manager/SealedSecret.yaml",
-            "unsealed_secret_path": "./unsealed-secrets/Cloudflare.yaml",
-            "namespace": "cert-manager"
+            "unsealed_secret_path": "./unsealed-secrets/Cloudflare.yaml"
         }
     }
 }
