@@ -17,6 +17,9 @@ metadata:
   name: traefik-routes-kustomize
   namespace: default
 spec:
+  dependsOn:
+    - name: traefik-crd
+      namespace: default
   interval: 5m
   path: "./routes/kustomization.yaml"
   prune: true
