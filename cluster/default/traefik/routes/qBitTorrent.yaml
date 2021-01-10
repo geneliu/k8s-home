@@ -8,7 +8,8 @@ spec:
   entryPoints:
     - websecure
   tls:
-    certResolver: le
+    store: 
+      name: default
   routes:
     - kind: Rule
       match: Host(`torrent.zolnierowi.cz`)

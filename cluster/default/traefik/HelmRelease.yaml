@@ -5,6 +5,9 @@ metadata:
   name: traefik
   namespace: default
 spec:
+  dependsOn:
+    - name: cert-manager
+      namespace: cert-manager
   chart:
     spec:
       # renovate: registryUrl=https://helm.traefik.io/traefik
@@ -20,10 +23,6 @@ spec:
         enabled: true
         namespaces: ["default", "media", "programming"]
     additionalArguments:
-      - "--certificatesresolvers.le.acme.tlschallenge"
-      - "--certificatesresolvers.le.acme.email=zbigniew.zolnierowicz@gmail.com"
-      - "--certificatesresolvers.le.acme.storage=/data/acme.json"
-      - "--certificatesresolvers.le.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--accesslog=true"
     persistence:
       enabled: true
