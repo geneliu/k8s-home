@@ -69,7 +69,7 @@ For why you need the second command, see [this issue](https://github.com/fluxcd/
 - flux-system
     - [x] OpenEBS with Local PV Hostpath
 - programming
-    - [ ] Gitea
+    - [x] Gitea
     - [ ] Jenkins
 
 ## Folder structure
