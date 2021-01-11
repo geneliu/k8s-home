@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: letsencrypt-production-cert
+spec:
+  secretName: letsencrypt-production-cert-secret
+  dnsNames:
+    - "*.zolnierowi.cz"
+  issuerRef:
+    name: letsencrypt-production
+    kind: Issuer
+    group: cert-manager.io

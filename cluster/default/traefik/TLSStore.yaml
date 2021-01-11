@@ -5,4 +5,4 @@ metadata:
   namespace: default
 spec:
   defaultCertificate:
-    secretName: letsencrypt-staging-cert-secret
+    secretName: letsencrypt-production-cert-secret
