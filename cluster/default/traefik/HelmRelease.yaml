@@ -34,7 +34,7 @@ spec:
       ssh:
         port: 2222
         expose: true
-        exposedPort: 25
+        exposedPort: 22
         protocol: TCP
       traefik:
         port: 9000
